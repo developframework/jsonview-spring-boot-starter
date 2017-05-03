@@ -24,5 +24,6 @@ public class MyApplication {
 使用注解`@EnableJsonview`自动化完成对`JsonviewResponseReturnValueHandler`和`DataModelReturnValueHandler`的注册。在spring-boot的application.properties总配置项中可以使用
 
 ```properties
-jsonview.locations=classpath*:jsonview/*.xml
+jsonview.locations=classpath*:jsonview/*.xml #指定扫描路径
+jsonview.objectmapper.usedefault=true #采用默认的ObjectMapper对象
 ```
