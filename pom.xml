@@ -21,7 +21,7 @@
 
 	<issueManagement>
 		<system>GitHub Issues</system>
-		<url>https://github.com/developframework/spring-boot-starter-jsonview</url>
+		<url>https://github.com/developframework/jsonview-spring-boot-starter</url>
 	</issueManagement>
 
 	<licenses>
