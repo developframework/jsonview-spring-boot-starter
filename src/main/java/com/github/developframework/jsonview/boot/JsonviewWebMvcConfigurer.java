@@ -22,8 +22,7 @@ public class JsonviewWebMvcConfigurer extends WebMvcConfigurerAdapter {
 
 	@Override
 	public void addReturnValueHandlers(List<HandlerMethodReturnValueHandler> returnValueHandlers) {
-		log.info("-----------------------------------");
-		returnValueHandlers.add(0, jsonviewResponseReturnValueHandler);
-		returnValueHandlers.add(0, dataModelReturnValueHandler);
+		returnValueHandlers.add(jsonviewResponseReturnValueHandler);
+		returnValueHandlers.add(dataModelReturnValueHandler);
 	}
 }
