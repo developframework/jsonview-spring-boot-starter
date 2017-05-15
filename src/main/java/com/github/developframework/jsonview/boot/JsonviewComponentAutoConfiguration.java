@@ -4,8 +4,9 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.github.developframework.jsonview.boot.annotation.EnableJsonview;
 import com.github.developframework.jsonview.core.JsonviewFactory;
 import com.github.developframework.jsonview.spring.JsonviewScanLoader;
-import com.github.developframework.jsonview.springmvc.DataModelReturnValueHandler;
-import com.github.developframework.jsonview.springmvc.JsonviewResponseReturnValueHandler;
+import com.github.developframework.jsonview.spring.mvc.DataModelReturnValueHandler;
+import com.github.developframework.jsonview.spring.mvc.DataNameAnnotationReturnValueHandler;
+import com.github.developframework.jsonview.spring.mvc.JsonviewResponseReturnValueHandler;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.AutoConfigureAfter;
@@ -35,7 +36,6 @@ public class JsonviewComponentAutoConfiguration {
     }
 
     @Bean
-    @Autowired
     @ConditionalOnProperty(name = "jsonview.objectmapper.usedefault", havingValue = "false")
     public JsonviewFactory jsonviewFactoryForNewObjectMapper(JsonviewProperties jsonviewProperties) {
         log.info("Jsonview framework use a new ObjectMapper.");
@@ -44,14 +44,17 @@ public class JsonviewComponentAutoConfiguration {
     }
 
     @Bean
-    @Autowired
     public DataModelReturnValueHandler dataModelReturnValueHandler(JsonviewFactory jsonviewFactory) {
         return new DataModelReturnValueHandler(jsonviewFactory);
     }
 
     @Bean
-    @Autowired
     public JsonviewResponseReturnValueHandler jsonviewResponseReturnValueHandler(JsonviewFactory jsonviewFactory) {
         return new JsonviewResponseReturnValueHandler(jsonviewFactory);
+    }
+
+    @Bean
+    public DataNameAnnotationReturnValueHandler dataNameAnnotationReturnValueHandler(JsonviewFactory jsonviewFactory) {
+        return new DataNameAnnotationReturnValueHandler(jsonviewFactory);
     }
 }

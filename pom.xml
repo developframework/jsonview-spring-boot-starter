@@ -3,9 +3,9 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.github.developframework</groupId>
 	<artifactId>jsonview-spring-boot-starter</artifactId>
-	<version>1.0.0</version>
+	<version>1.1.0</version>
 
-	<name>Jsonview3 Framework for spring-boot</name>
+	<name>Jsonview4 Framework for spring-boot</name>
 	<url>https://github.com/developframework/spring-boot-starter-jsonview</url>
 	<description>Jsonview framework built on Jackson framework,Implementation through XML configuration file to customize the json format, greatly improved the Java generates a json string freedom, let the development of modular more convenient quickly.</description>
 	<inceptionYear>2017</inceptionYear>
@@ -35,11 +35,11 @@
 		<connection>scm:git:git@github.com:developframework/jsonview-spring-boot-starter.git</connection>
 		<developerConnection>scm:git:git@github.com:developframework/jsonview-spring-boot-starter.git</developerConnection>
 		<url>https://github.com/developframework/jsonview-spring-boot-starter</url>
-		<tag>1.0.0</tag>
+		<tag>${project.version}</tag>
 	</scm>
 
 	<properties>
-		<jsonview3.version>3.2.0</jsonview3.version>
+		<jsonview4.version>4.0.0</jsonview4.version>
 		<spring-boot.version>1.5.2.RELEASE</spring-boot.version>
 	</properties>
 
@@ -66,8 +66,8 @@
 	<dependencies>
 		<dependency>
 			<groupId>com.github.developframework</groupId>
-			<artifactId>jsonview3-springmvc</artifactId>
-			<version>${jsonview3.version}</version>
+			<artifactId>jsonview4-spring</artifactId>
+			<version>${jsonview4.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
