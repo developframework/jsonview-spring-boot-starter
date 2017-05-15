@@ -5,7 +5,6 @@ import com.github.developframework.jsonview.boot.annotation.EnableJsonview;
 import com.github.developframework.jsonview.core.JsonviewFactory;
 import com.github.developframework.jsonview.spring.JsonviewScanLoader;
 import com.github.developframework.jsonview.spring.mvc.DataModelReturnValueHandler;
-import com.github.developframework.jsonview.spring.mvc.DataNameAnnotationReturnValueHandler;
 import com.github.developframework.jsonview.spring.mvc.JsonviewResponseReturnValueHandler;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,7 +16,7 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Import;
 
 /**
- * Auto configuration for Jsonview.
+ * 自动配置Jsonview
  * {@link EnableJsonview}
  */
 @Configuration
@@ -51,10 +50,5 @@ public class JsonviewComponentAutoConfiguration {
     @Bean
     public JsonviewResponseReturnValueHandler jsonviewResponseReturnValueHandler(JsonviewFactory jsonviewFactory) {
         return new JsonviewResponseReturnValueHandler(jsonviewFactory);
-    }
-
-    @Bean
-    public DataNameAnnotationReturnValueHandler dataNameAnnotationReturnValueHandler(JsonviewFactory jsonviewFactory) {
-        return new DataNameAnnotationReturnValueHandler(jsonviewFactory);
     }
 }
