@@ -1,4 +1,6 @@
-添加依赖包：
+# jsonview-spring-boot-starter
+
+## 1. 引入
 
 ```xml
 <dependency>
@@ -7,6 +9,8 @@
   <version>1.0.0</version>
 </dependency>
 ```
+
+## 2. 配置
 
 使用`@EnableJsonview`注解开启Jsonview功能
 
