@@ -3,7 +3,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.github.developframework</groupId>
 	<artifactId>jsonview-spring-boot-starter</artifactId>
-	<version>1.1.0</version>
+	<version>1.1.1</version>
 
 	<name>Jsonview4 Framework for spring-boot</name>
 	<url>https://github.com/developframework/spring-boot-starter-jsonview</url>
@@ -39,7 +39,7 @@
 	</scm>
 
 	<properties>
-		<jsonview4.version>4.0.0</jsonview4.version>
+		<jsonview4.version>4.0.1</jsonview4.version>
 		<spring-boot.version>1.5.2.RELEASE</spring-boot.version>
 	</properties>
 
